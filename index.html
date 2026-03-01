@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mocha Vista</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-- NAV -->
+    <header class="header">
+        <nav class="nav container">
+            <a class="logo" href="#top">Mocha <span>Vista</span></a>
+
+            <ul class="links">
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#special">Today’s Special</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <a class="cta" href="#menu">Order Now</a>
+        </nav>
+    </header>
+
+    <main id="top">
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container hero-wrap">
+                <div class="hero-text">
+                    <h1>Coffee that tastes like morning.</h1>
+                    <p>
+                        Freshly ground beans, warm pastries, and a cozy place to slow down.
+                        Discover our menu and try today’s special.
+                    </p>
+
+                    <div class="actions">
+                        <a class="btn btn-primary" href="#menu">View Menu</a>
+                        <a class="btn btn-secondary" href="#special">See Today’s Special</a>
+                    </div>
+                </div>
+
+                <img class="hero-img" src="Img/Latte.png"
+                    alt="Latte with latte art and a butter croissant on a wooden board">
+            </div>
+        </section>
+
+        <!-- SPECIAL -->
+        <section id="special" class="section section-alt">
+            <div class="container">
+                <div class="title-row">
+                    <span class="line"></span>
+                    <h2>Today’s Special</h2>
+                    <span class="line"></span>
+                </div>
+
+                <article class="card special">
+                    <img class="special-img" src="Img/Creamy Tomato Soup.png"
+                        alt="Bowl of creamy tomato soup with croutons on a wooden table">
+
+                    <div class="special-info">
+                        <span class="badge">Today</span>
+                        <h3>Creamy Tomato Soup</h3>
+                        <p>Warm, velvety, and perfect with sourdough croutons.</p>
+
+                        <div class="special-bottom">
+                            <strong class="price">69 NOK</strong>
+                            <a class="btn btn-primary" href="#menu">Add to Order</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- MENU -->
+        <section id="menu" class="section section-menu">
+            <div class="container">
+                <div class="title-row">
+                    <span class="line"></span>
+                    <h2>Our Menu</h2>
+                    <span class="line"></span>
+                </div>
+
+                <div class="menu-wrap">
+                    <!-- Breakfast -->
+                    <article class="card menu-card">
+                        <h3>Breakfast</h3>
+
+                        <dl class="menu">
+                            <div class="item">
+                                <dt>Butter Croissant</dt>
+                                <dd class="p">45 NOK</dd>
+                                <dd class="d">Flaky, buttery, baked daily.</dd>
+                            </div>
+                            <div class="item">
+                                <dt>Avocado & Egg Toast</dt>
+                                <dd class="p">99 NOK</dd>
+                                <dd class="d">Sourdough, avocado, soft egg, pepper.</dd>
+                            </div>
+                            <div class="item">
+                                <dt>Granola Bowl with Berries</dt>
+                                <dd class="p">89 NOK</dd>
+                                <dd class="d">Greek yogurt, honey, berries.</dd>
+                            </div>
+                            <div class="item">
+                                <dt>Cinnamon Roll</dt>
+                                <dd class="p">59 NOK</dd>
+                                <dd class="d">Warm cinnamon, light glaze.</dd>
+                            </div>
+                            <div class="item">
+                                <dt>Yogurt & Honey</dt>
+                                <dd class="p">69 NOK</dd>
+                                <dd class="d">Honey, walnuts, creamy yogurt.</dd>
+                            </div>
+                            <div class="item">
+                                <dt>Sourdough Ham & Cheese</dt>
+                                <dd class="p">119 NOK</dd>
+                                <dd class="d">Toasted, melty, comforting.</dd>
+                            </div>
+                        </dl>
+                    </article>
+
+                    <!-- Lunch -->
+                    <article class="card menu-card">
+                        <h3>Lunch</h3>
+
+                        <dl class="menu">
+                            <div class="item">
+                                <dt>Pesto Pasta</dt>
+                                <dd class="p">149 NOK</dd>
+                                <dd class="d">Basil pesto, parmesan.</dd>
+                            </div>
+                            <div class="item">
+                                <dt>Chicken Salad</dt>
+                                <dd class="p">159 NOK</dd>
+                                <dd class="d">Crisp greens, grilled chicken.</dd>
+                            </div>
+                            <div class="item">
+                                <dt>Mushroom Risotto</dt>
+                                <dd class="p">169 NOK</dd>
+                                <dd class="d">Creamy rice, mushrooms.</dd>
+                            </div>
+                            <div class="item">
+                                <dt>Tomato Soup (Bowl)</dt>
+                                <dd class="p">69 NOK</dd>
+                                <dd class="d">Served with croutons.</dd>
+                            </div>
+                            <div class="item">
+                                <dt>Quiche of the Day</dt>
+                                <dd class="p">129 NOK</dd>
+                                <dd class="d">Ask what’s fresh today.</dd>
+                            </div>
+                            <div class="item">
+                                <dt>Roast Veggie Panini</dt>
+                                <dd class="p">149 NOK</dd>
+                                <dd class="d">Warm press, cheese, veggies.</dd>
+                            </div>
+                        </dl>
+                    </article>
+
+                    <!-- Drinks -->
+                    <article class="card menu-card">
+                        <h3>Drinks</h3>
+
+                        <dl class="menu">
+                            <div class="item">
+                                <dt>Espresso</dt>
+                                <dd class="p">39 NOK</dd>
+                                <dd class="d">Single or double.</dd>
+                            </div>
+                            <div class="item">
+                                <dt>Americano</dt>
+                                <dd class="p">45 NOK</dd>
+                                <dd class="d">Espresso + hot water.</dd>
+                            </div>
+                            <div class="item">
+                                <dt>Cappuccino</dt>
+                                <dd class="p">59 NOK</dd>
+                                <dd class="d">Foamy and balanced.</dd>
+                            </div>
+                            <div class="item">
+                                <dt>Latte</dt>
+                                <dd class="p">65 NOK</dd>
+                                <dd class="d">Smooth espresso and milk.</dd>
+                            </div>
+                            <div class="item">
+                                <dt>Matcha Latte</dt>
+                                <dd class="p">75 NOK</dd>
+                                <dd class="d">Creamy ceremonial matcha.</dd>
+                            </div>
+                            <div class="item">
+                                <dt>Hot Chocolate</dt>
+                                <dd class="p">69 NOK</dd>
+                                <dd class="d">Cozy and cocoa-rich.</dd>
+                            </div>
+                            <div class="item">
+                                <dt>Tea (Selection)</dt>
+                                <dd class="p">45 NOK</dd>
+                                <dd class="d">Black, green, or herbal.</dd>
+                            </div>
+                            <div class="item">
+                                <dt>Fresh Orange Juice</dt>
+                                <dd class="p">79 NOK</dd>
+                                <dd class="d">Freshly squeezed.</dd>
+                            </div>
+                        </dl>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section dark">
+            <div class="container contact-wrap">
+                <div>
+                    <h2>Contact</h2>
+                    <address class="address">
+                        <div><strong>Address:</strong> 12 Coffee Street, Oslo</div>
+                        <div><strong>Phone:</strong> +47 123 45 678</div>
+                        <div><strong>Email:</strong> hello@mochavista.no</div>
+                    </address>
+                </div>
+
+                <div>
+                    <h3>Opening Hours</h3>
+                    <div class="hours">
+                        <div><span>Mon–Fri</span><span>08:00–18:00</span></div>
+                        <div><span>Saturday</span><span>09:00–16:00</span></div>
+                        <div><span>Sunday</span><span>Closed</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-text">
+            <div>© 2026 All rights reserved.</div>
+            <div>Written by HansDev365.</div>
+        </div>
+    </footer>
+</body>
+
+</html>
