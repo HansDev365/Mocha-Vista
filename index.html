@@ -12,26 +12,37 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="CSS/styles.css" />
+
+    <meta name="description" content="Mocha Vista – a modern cafe landing page demo featuring a clean menu, today’s special, and contact details." />
+    <meta property="og:title" content="Mocha Vista" />
+    <meta property="og:description" content="Modern cafe landing page demo – menu, today’s special, and contact details." />
+    <meta property="og:type" content="website" />
+
 </head>
 
-<body>
+<body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
     <!-- NAV -->
     <header class="header">
         <nav class="nav container">
             <a class="logo" href="#top">Mocha <span>Vista</span></a>
 
-            <ul class="links">
+            <ul class="links" id="primary-nav">
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#special">Today’s Special</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
+            <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+                <span class="menu-icon" aria-hidden="true"></span>
+            </button>
+
             <a class="cta" href="#menu">Order Now</a>
         </nav>
     </header>
 
-    <main id="top">
+    <main id="main">
         <!-- HERO -->
         <section class="hero">
             <div class="container hero-wrap">
@@ -224,8 +235,8 @@
                     <h2>Contact</h2>
                     <address class="address">
                         <div><strong>Address:</strong> 12 Coffee Street, Oslo</div>
-                        <div><strong>Phone:</strong> +47 123 45 678</div>
-                        <div><strong>Email:</strong> hello@mochavista.no</div>
+                        <div><strong>Phone:</strong> <a href="tel:+4712345678">+47 123 45 678</a></div>
+                        <div><strong>Email:</strong> <a href="mailto:hello@mochavista.no">hello@mochavista.no</a></div>
                     </address>
                 </div>
 
@@ -248,6 +259,42 @@
             <div>Written by HansDev365.</div>
         </div>
     </footer>
+
+    <script>
+        (() => {
+            const btn = document.querySelector('.menu-toggle');
+            const links = document.querySelectorAll('#primary-nav a');
+
+            if (!btn) return;
+
+            const close = () => {
+                document.body.classList.remove('nav-open');
+                btn.setAttribute('aria-expanded', 'false');
+                btn.setAttribute('aria-label', 'Open menu');
+            };
+
+            const open = () => {
+                document.body.classList.add('nav-open');
+                btn.setAttribute('aria-expanded', 'true');
+                btn.setAttribute('aria-label', 'Close menu');
+            };
+
+            btn.addEventListener('click', () => {
+                document.body.classList.contains('nav-open') ? close() : open();
+            });
+
+            links.forEach(a => a.addEventListener('click', close));
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') close();
+            });
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 820) close();
+            });
+        })();
+    </script>
 </body>
 
 </html>
+
