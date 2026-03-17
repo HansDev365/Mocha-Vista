@@ -14,9 +14,11 @@
 
     <link rel="stylesheet" href="CSS/styles.css" />
 
-    <meta name="description" content="Mocha Vista – a modern cafe landing page demo featuring a clean menu, today’s special, and contact details." />
+    <meta name="description"
+        content="Mocha Vista – a modern cafe landing page demo featuring a clean menu, today’s special, and contact details." />
     <meta property="og:title" content="Mocha Vista" />
-    <meta property="og:description" content="Modern cafe landing page demo – menu, today’s special, and contact details." />
+    <meta property="og:description"
+        content="Modern cafe landing page demo – menu, today’s special, and contact details." />
     <meta property="og:type" content="website" />
 
 </head>
@@ -34,7 +36,8 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false"
+                aria-label="Open menu">
                 <span class="menu-icon" aria-hidden="true"></span>
             </button>
 
@@ -260,41 +263,7 @@
         </div>
     </footer>
 
-    <script>
-        (() => {
-            const btn = document.querySelector('.menu-toggle');
-            const links = document.querySelectorAll('#primary-nav a');
 
-            if (!btn) return;
-
-            const close = () => {
-                document.body.classList.remove('nav-open');
-                btn.setAttribute('aria-expanded', 'false');
-                btn.setAttribute('aria-label', 'Open menu');
-            };
-
-            const open = () => {
-                document.body.classList.add('nav-open');
-                btn.setAttribute('aria-expanded', 'true');
-                btn.setAttribute('aria-label', 'Close menu');
-            };
-
-            btn.addEventListener('click', () => {
-                document.body.classList.contains('nav-open') ? close() : open();
-            });
-
-            links.forEach(a => a.addEventListener('click', close));
-
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape') close();
-            });
-
-            window.addEventListener('resize', () => {
-                if (window.innerWidth > 820) close();
-            });
-        })();
-    </script>
 </body>
 
 </html>
-
